@@ -10,7 +10,11 @@ class TestCheckPWDFunc(unittest.TestCase):
         check_pwd(pwd)
         self.assertFalse(check_pwd(pwd), msg='Check_PWD_Test({})'.format(pwd))
 
-
+    # test long borderline pwd
+    def test2(self):
+        pwd = "abc123456712345671234"
+        check_pwd(pwd)
+        self.assertFalse(check_pwd(pwd), msg='Check_PWD_Test({})'.format(pwd))
 
 
 if __name__ == '__main__':
