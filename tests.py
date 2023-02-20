@@ -39,6 +39,12 @@ class TestCheckPWDFunc(unittest.TestCase):
         pwd = "abCdefg2i"
         self.assertFalse(check_pwd(pwd), msg='Check_PWD_Test({})'.format(pwd))
 
+    # use of special char % (should return TRUE)
+    def test8(self):
+        pwd = "%bCd%fg2i"
+        self.assertTrue(check_pwd(pwd), msg='Check_PWD_Test({})'.format(pwd))
+
+
 
 if __name__ == '__main__':
     unittest.main()
