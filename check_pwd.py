@@ -1,9 +1,12 @@
 
 def check_pwd(password):
     if 7 < len(password) < 21:
-        return check_lowercase(password)
+        return contains_upper_case(password) and contains_lower_case(password)
     else:
         return False
 
-def check_lowercase(text):
+def contains_upper_case(text):
     return False if text.islower() else True
+
+def contains_lower_case(text):
+    return False if text.isupper() else True
