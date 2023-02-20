@@ -14,10 +14,16 @@ class TestCheckPWDFunc(unittest.TestCase):
         pwd = "abc123456712345671234"
         self.assertFalse(check_pwd(pwd), msg='Check_PWD_Test({})'.format(pwd))
 
-    # test no lowercase letters but correct length
+    # test no uppercase letters but correct length
     def test3(self):
         pwd = "abcdefghi"
         self.assertFalse(check_pwd(pwd), msg='Check_PWD_Test({})'.format(pwd))
+
+    # test no lowercase letters but correct length
+    def test4(self):
+        pwd = "ABCDEFGHI"
+        self.assertFalse(check_pwd(pwd), msg='Check_PWD_Test({})'.format(pwd))
+
 
 if __name__ == '__main__':
     unittest.main()
