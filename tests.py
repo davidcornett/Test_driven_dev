@@ -29,6 +29,11 @@ class TestCheckPWDFunc(unittest.TestCase):
         pwd = "123456789"
         self.assertFalse(check_pwd(pwd), msg='Check_PWD_Test({})'.format(pwd))
 
+    # no digits
+    def test6(self):
+        pwd = "abCdefghi"
+        self.assertFalse(check_pwd(pwd), msg='Check_PWD_Test({})'.format(pwd))
+
 
 if __name__ == '__main__':
     unittest.main()
