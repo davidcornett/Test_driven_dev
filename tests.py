@@ -34,6 +34,11 @@ class TestCheckPWDFunc(unittest.TestCase):
         pwd = "abCdefghi"
         self.assertFalse(check_pwd(pwd), msg='Check_PWD_Test({})'.format(pwd))
 
+    # no special chars: ~`!@#$%^&*()_+-=
+    def test7(self):
+        pwd = "abCdefg2i"
+        self.assertFalse(check_pwd(pwd), msg='Check_PWD_Test({})'.format(pwd))
+
 
 if __name__ == '__main__':
     unittest.main()
