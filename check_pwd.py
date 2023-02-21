@@ -31,5 +31,8 @@ def contains_correct_chars(text):
             num = True
         elif char in special_list:
             special = True
+        else:
+            # exit loop early, incorrect char found
+            return False 
     return num and letter and special
     
