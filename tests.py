@@ -53,6 +53,11 @@ class TestCheckPWDFunc(unittest.TestCase):
     def test10(self):
         pwd = "abCde[$2i"
         self.assertFalse(check_pwd(pwd), msg='Check_PWD_Test({})'.format(pwd))
+    
+    # use of space
+    def test11(self):
+        pwd = "abCde f$2i"
+        self.assertFalse(check_pwd(pwd), msg='Check_PWD_Test({})'.format(pwd))
 
 if __name__ == '__main__':
     unittest.main()
